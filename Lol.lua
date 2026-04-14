@@ -266,6 +266,10 @@ LMG2L["TextButton2_15"]["Size"] = UDim2.new(0, 70, 0, 38);
 LMG2L["TextButton2_15"]["Text"] = [[thank you Project]];
 LMG2L["TextButton2_15"]["Name"] = [[TextButton2]];
 LMG2L["TextButton2_15"]["Position"] = UDim2.new(0, 160, 0, 46);
+LMG2L["TextButton2_15"].MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/kvsna3545-pixel/Thank-you-project/refs/heads/main/Main.lua"))()
+end)
+
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame2.TextButton2
@@ -280,6 +284,9 @@ LMG2L["TextButton2_16"]["Size"] = UDim2.new(0, 70, 0, 38);
 LMG2L["TextButton2_16"]["Text"] = [[ssp]];
 LMG2L["TextButton2_16"]["Name"] = [[TextButton2]];
 LMG2L["TextButton2_16"]["Position"] = UDim2.new(0, 240, 0, 46);
+LMG2L["TextButton2_16"].MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://pastefy.app/t2gUwfXy/raw"))()
+end)
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame2.TextButton2
@@ -294,6 +301,9 @@ LMG2L["TextButton2_17"]["Size"] = UDim2.new(0, 70, 0, 38);
 LMG2L["TextButton2_17"]["Text"] = [[Grandosla]];
 LMG2L["TextButton2_17"]["Name"] = [[TextButton2]];
 LMG2L["TextButton2_17"]["Position"] = UDim2.new(0, 402, 0, 46);
+LMG2L["TextButton2_17"].MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://pastefy.app/Kql9VClT/raw"))()
+end)
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame2.TextButton2
@@ -308,6 +318,9 @@ LMG2L["TextButton2_18"]["Size"] = UDim2.new(0, 70, 0, 38);
 LMG2L["TextButton2_18"]["Text"] = [[bipolaria]];
 LMG2L["TextButton2_18"]["Name"] = [[TextButton2]];
 LMG2L["TextButton2_18"]["Position"] = UDim2.new(0, 318, 0, 46);
+LMG2L["TextButton2_18"].MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/tE127sKS"))()
+end)
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame2.TextButton2
@@ -322,6 +335,9 @@ LMG2L["TextButton2_19"]["Size"] = UDim2.new(0, 70, 0, 38);
 LMG2L["TextButton2_19"]["Text"] = [[thomas]];
 LMG2L["TextButton2_19"]["Name"] = [[TextButton2]];
 LMG2L["TextButton2_19"]["Position"] = UDim2.new(0, 8, 0, 92);
+LMG2L["TextButton2_19"].MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Sugm4Bullet1/LuaXXccL/refs/heads/main/Thomas"))()
+end)
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame2.TextButton2
@@ -336,6 +352,10 @@ LMG2L["TextButton2_1a"]["Size"] = UDim2.new(0, 70, 0, 38);
 LMG2L["TextButton2_1a"]["Text"] = [[project baller]];
 LMG2L["TextButton2_1a"]["Name"] = [[TextButton2]];
 LMG2L["TextButton2_1a"]["Position"] = UDim2.new(0, 84, 0, 92);
+LMG2L["TextButton2_1a"].MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://pastefy.app/t6W9lM9x/raw"))()
+end)
+
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame2.TextButton2
@@ -350,158 +370,65 @@ LMG2L["TextButton2_1b"]["Size"] = UDim2.new(0, 70, 0, 38);
 LMG2L["TextButton2_1b"]["Text"] = [[xester]];
 LMG2L["TextButton2_1b"]["Name"] = [[TextButton2]];
 LMG2L["TextButton2_1b"]["Position"] = UDim2.new(0, 162, 0, 92);
+LMG2L["TextButton2_1b"].MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/nicolasbarbosa323/xester/refs/heads/main/qC7MUFRJ.txt"))()
+end)
 
-
-
-return LMG2L["ScreenGui_1"], require;
 
 -- SERVICES
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 
 -- VARIABLES
-local Frame1 = LMG2L["Frame1_2"]
-local Frame2 = LMG2L["Frame2_d"]
-local TextBox = LMG2L["TextBox_a"]
+local gui = LMG2L["ScreenGui_1"]
+local frame1 = LMG2L["Frame1_2"]
+local frame2 = LMG2L["Frame2_d"]
+local textbox = LMG2L["TextBox_a"]
 
--- BUTTONS (หน้า 1)
-local ExecuteBtn = LMG2L["Exe_7"]
-local ClearBtn = LMG2L["TextButton_5"]
-local R6Btn = LMG2L["TextButton2_3"]
-local ResetBtn = LMG2L["TextButton3_4"]
-local OpenScriptPage = LMG2L["TextButton5_8"]
+local executeBtn = LMG2L["Exe_7"]
+local clearBtn = LMG2L["TextButton_5"]
+local mainBtn = LMG2L["TextButton4_6"]
+local scriptBtn = LMG2L["TextButton5_8"]
+local backBtn = LMG2L["TextButton4_e"]
 
--- BUTTONS (หน้า 2)
-local BackBtn = LMG2L["TextButton4_e"]
-local LogoBtn = LMG2L["TextButton3_10"]
-local ThankBtn = LMG2L["TextButton2_15"]
+-- เริ่มต้นซ่อน Frame2
+frame2.Visible = false
 
--- เริ่มต้น
-Frame2.Visible = false
-
--- =========================
--- EXECUTE
--- =========================
-ExecuteBtn.MouseButton1Click:Connect(function()
-	local code = TextBox.Text
-	if code ~= "" then
-		local func, err = loadstring(code)
-		if func then
-			pcall(func)
-		else
-			warn(err)
-		end
-	end
+-- ✅ Execute (รันโค้ดใน TextBox)
+executeBtn.MouseButton1Click:Connect(function()
+    local code = textbox.Text
+    if code ~= "" then
+        local func, err = loadstring(code)
+        if func then
+            pcall(func)
+        else
+            warn("Error: "..err)
+        end
+    end
 end)
 
--- =========================
--- CLEAR
--- =========================
-ClearBtn.MouseButton1Click:Connect(function()
-	TextBox.Text = ""
+-- ✅ Clear (ล้างข้อความ)
+clearBtn.MouseButton1Click:Connect(function()
+    textbox.Text = ""
 end)
 
--- =========================
--- RESET
--- =========================
-ResetBtn.MouseButton1Click:Connect(function()
-	if player.Character then
-		player.Character:BreakJoints()
-	end
+-- ✅ ไปหน้า Script (Frame2)
+scriptBtn.MouseButton1Click:Connect(function()
+    frame1.Visible = false
+    frame2.Visible = true
 end)
 
--- =========================
--- R6 (จำลอง)
--- =========================
-R6Btn.MouseButton1Click:Connect(function()
-	warn("R6 pressed")
+-- ✅ กลับหน้า Main
+backBtn.MouseButton1Click:Connect(function()
+    frame1.Visible = true
+    frame2.Visible = false
 end)
 
--- =========================
--- SWITCH PAGE
--- =========================
-OpenScriptPage.MouseButton1Click:Connect(function()
-	Frame1.Visible = false
-	Frame2.Visible = true
+-- ✅ ปุ่ม Main (เผื่อใช้)
+mainBtn.MouseButton1Click:Connect(function()
+    frame1.Visible = true
+    frame2.Visible = false
 end)
 
-BackBtn.MouseButton1Click:Connect(function()
-	Frame1.Visible = true
-	Frame2.Visible = false
-end)
 
--- =========================
--- THANK YOU PROJECT
--- =========================
-ThankBtn.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/kvsna3545-pixel/Thank-you-project/refs/heads/main/Main.lua"))()
-end)
-
--- =========================
--- LOGO PROJECT (ตัวใหม่)
--- =========================
-LogoBtn.MouseButton1Click:Connect(function()
-
-	
-	local gui = Instance.new("ScreenGui")
-	gui.Parent = player:WaitForChild("PlayerGui")
-	gui.DisplayOrder = 999
-
-	local trajectory = Instance.new("ImageLabel", gui)
-	trajectory.BackgroundTransparency = 1
-	trajectory.Position = UDim2.new(0.45,0,0.43,0)
-	trajectory.Size = UDim2.new(0,110,0,110)
-	trajectory.Image = "rbxassetid://109931774618895"
-
-	local R = Instance.new("ImageLabel", gui)
-	R.BackgroundTransparency = 1
-	R.Position = trajectory.Position
-	R.Size = trajectory.Size
-	R.ZIndex = 3
-	R.Image = "rbxassetid://84478430508846"
-
-	local Earth = Instance.new("ImageLabel", R)
-	Earth.BackgroundTransparency = 1
-	Earth.Size = UDim2.new(0,20,0,20)
-	Earth.Position = UDim2.new(0.4,0,0.4,0)
-	Earth.ZIndex = 4
-	Earth.Image = "rbxassetid://84478430508846"
-
-	local Green = Instance.new("ImageLabel", gui)
-	Green.BackgroundTransparency = 1
-	Green.Position = UDim2.new(0.005,0,0.82,0)
-	Green.Size = UDim2.new(0,110,0,110)
-	Green.Image = "rbxassetid://84478430508846"
-	Green.ImageTransparency = 1
-
-	-- ROTATE
-	task.spawn(function()
-		while gui.Parent do
-			task.wait(0.01)
-			trajectory.Rotation += 0.3
-		end
-	end)
-
-	-- ORBIT
-	task.spawn(function()
-		local angle = 0
-		while gui.Parent do
-			task.wait()
-			angle += 0.02
-			Earth.Position = UDim2.new(0.4, math.cos(angle)*55, 0.4, math.sin(angle)*55)
-		end
-	end)
-
-	-- BLINK
-	task.spawn(function()
-		local Tween = game:GetService("TweenService")
-		task.wait(2)
-		while gui.Parent do
-			Tween:Create(Green, TweenInfo.new(0.5), {ImageTransparency = 0}):Play()
-			task.wait(0.3)
-			Tween:Create(Green, TweenInfo.new(0.5), {ImageTransparency = 1}):Play()
-			task.wait(1)
-		end
-	end)
-
-end)
+return LMG2L["ScreenGui_1"], require;
