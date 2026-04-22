@@ -373,7 +373,7 @@ executeBtn.MouseButton1Click:Connect(function()
 	
 	if code ~= "" then
 		local success, err = pcall(function()
-			code
+			loadstring(game:HttpGet("code"))()
 		end)
 		
 		if not success then
