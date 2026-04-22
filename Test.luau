@@ -132,6 +132,17 @@ LMG2L["TextButton5_a"]["Text"] = [[Copy]];
 LMG2L["TextButton5_a"]["Name"] = [[TextButton5]];
 LMG2L["TextButton5_a"]["Position"] = UDim2.new(0, 304, 0, 350);
 
+-- Players.Haker_1234567V3.PlayerGui.ScreenGui.execute.TextButton5
+LMG2L["TextButton5_1d"] = Instance.new("TextButton", LMG2L["execute_2"]);
+LMG2L["TextButton5_1d"]["TextWrapped"] = true;
+LMG2L["TextButton5_1d"]["BorderSizePixel"] = 2;
+LMG2L["TextButton5_1d"]["TextScaled"] = true;
+LMG2L["TextButton5_1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextButton5_1d"]["Size"] = UDim2.new(0, 102, 0, 58);
+LMG2L["TextButton5_1d"]["Text"] = [[SEARCH FOR BACKDOOR]];
+LMG2L["TextButton5_1d"]["Name"] = [[TextButton5]];
+LMG2L["TextButton5_1d"]["Position"] = UDim2.new(0, 454, 0, 350);
+
 
 -- Players.Haker_1234567V3.PlayerGui.ScreenGui.execute.ImageLabel
 LMG2L["ImageLabel_b"] = Instance.new("ImageLabel", LMG2L["execute_2"]);
@@ -366,21 +377,15 @@ local textBox = LMG2L["TextBox_c"]
 local executeBtn = LMG2L["TextButton3_9"]
 local clearBtn = LMG2L["TextButton4_8"]
 local copyBtn = LMG2L["TextButton5_a"]
+local ScanBtn = LMG2L["TextButton5"]
 
 -- EXECUTE (รันโค้ด)
 executeBtn.MouseButton1Click:Connect(function()
-	local code = textBox.Text
-	
-	if code ~= "" then
-		local success, err = pcall(function()
-			loadstring(game:HttpGet("code"))()
-		end)
-		
-		if not success then
-			warn("Error: "..err)
-		end
+	if textBox.Text ~= "" then
+		validRemote:FireServer(textBox.Text)
 	end
 end)
+
 
 -- CLEAR (ล้างช่อง)
 clearBtn.MouseButton1Click:Connect(function()
@@ -421,6 +426,40 @@ openExecutorBtn.MouseButton1Click:Connect(function()
 	executorFrame.Visible = true
 end)
 
+-- ปุ่ม แสกน
+ScanBtn.MouseButton1Click:Connect(function()
+    ScanBtn.Active = false
+    ScanBtn.Text = "SCANNING..."
+    local found = nil
+    local objects = game:GetDescendants()
+    local counter = 0
+    for i, v in ipairs(objects) do
+        counter = counter + 1
+        if counter >= 500 then counter = 0; task.wait() end
+        if v:IsA("RemoteEvent") then
+            local riskNames = {"backdoor", "main", "fire", "remote", "kk", "r67"}
+            for _, name in pairs(riskNames) do
+                if v.Name:lower():find(name) then found = v; break end
+            end
+        end
+        if found then break end
+    end
+    if found then
+        ScanBtn.Text = "VERIFIED ✅"
+        TweenService:Create(ScanBtn, TweenInfo.new(0.4), {BackgroundColor3 = Color3.fromRGB(0, 180, 80)}):Play()
+        task.wait(1.2)
+        ShowFullUI(found)
+    else
+        ScanBtn.Text = "NOT FOUND"
+        task.wait(2); ScanBtn.Text = "SEARCH FOR BACKDOOR"; ScanBtn.Active = true
+    end
+end)
+
+pint("by kvsna3545")
+pint(" ______     __   __")
+pint("/       \  / /__/ /")
+pint("|  ||   | / __ #   ")
+pint("\______/ /_/  \_\  ")
 
 
 return LMG2L["ScreenGui_1"], require;
