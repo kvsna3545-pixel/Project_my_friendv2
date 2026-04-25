@@ -156,7 +156,7 @@ LMG2L["TextButton10_a"]["Name"] = [[TextButton10]];
 LMG2L["TextButton10_a"]["Style"] = Enum.ButtonStyle.RobloxButtonDefault;
 LMG2L["TextButton10_a"]["Position"] = UDim2.new(0, 436, 0, 228);
 LMG2L["TextButton10_a"].MouseButton1Click:Connect(function()
- loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-k00pgui-f3x-10545"))()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Untitled-Game-breh-10986", true))() 
 end)
 
 
@@ -315,5 +315,7 @@ loadBtn.MouseButton1Click:Connect(function()
 end)
 
 -- เซฟไว้ก่อน555
+
+pint("script by kvsna3545")
 
 return LMG2L["ScreenGui_1"], require;
