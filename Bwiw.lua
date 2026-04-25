@@ -38,6 +38,9 @@ LMG2L["TextButton9_3"]["Text"] = [[project baller]];
 LMG2L["TextButton9_3"]["Name"] = [[TextButton9]];
 LMG2L["TextButton9_3"]["Style"] = Enum.ButtonStyle.RobloxButtonDefault;
 LMG2L["TextButton9_3"]["Position"] = UDim2.new(0, 436, 0, 192);
+LMG2L["TextButton9_3"].MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://pastefy.app/t6W9lM9x/raw"))()
+end)
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextButton7
@@ -53,6 +56,10 @@ LMG2L["TextButton7_4"]["Text"] = [[Thank you Project]];
 LMG2L["TextButton7_4"]["Name"] = [[TextButton7]];
 LMG2L["TextButton7_4"]["Style"] = Enum.ButtonStyle.RobloxButtonDefault;
 LMG2L["TextButton7_4"]["Position"] = UDim2.new(0, 436, 0, 120);
+LMG2L["TextButton7_4"].MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/kvsna3545-pixel/Thank-you-project/refs/heads/main/Main.lua"))()
+end)
+
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextButton2
@@ -112,6 +119,9 @@ LMG2L["TextButton4_8"]["Text"] = [[R6]];
 LMG2L["TextButton4_8"]["Name"] = [[TextButton4]];
 LMG2L["TextButton4_8"]["Style"] = Enum.ButtonStyle.RobloxButtonDefault;
 LMG2L["TextButton4_8"]["Position"] = UDim2.new(0, 356, 0, 268);
+LMG2L["TextButton4_8"].MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet(('https://pastebin.com/raw/9wJepMwY'),true))()
+end)
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextButton11
@@ -127,6 +137,9 @@ LMG2L["TextButton11_9"]["Text"] = [[coolgui]];
 LMG2L["TextButton11_9"]["Name"] = [[TextButton11]];
 LMG2L["TextButton11_9"]["Style"] = Enum.ButtonStyle.RobloxButtonDefault;
 LMG2L["TextButton11_9"]["Position"] = UDim2.new(0, 438, 0, 268);
+LMG2L["TextButton11_9"].MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ShutUpJamesTheLoser/C00lkiddgui/refs/heads/main/C00lkiddgui"))()
+end)
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextButton10
@@ -142,6 +155,9 @@ LMG2L["TextButton10_a"]["Text"] = [[koopgui]];
 LMG2L["TextButton10_a"]["Name"] = [[TextButton10]];
 LMG2L["TextButton10_a"]["Style"] = Enum.ButtonStyle.RobloxButtonDefault;
 LMG2L["TextButton10_a"]["Position"] = UDim2.new(0, 436, 0, 228);
+LMG2L["TextButton10_a"].MouseButton1Click:Connect(function()
+ loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-k00pgui-f3x-10545"))()
+end)
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextButton6
@@ -157,6 +173,9 @@ LMG2L["TextButton6_b"]["Text"] = [[dex]];
 LMG2L["TextButton6_b"]["Name"] = [[TextButton6]];
 LMG2L["TextButton6_b"]["Style"] = Enum.ButtonStyle.RobloxButtonDefault;
 LMG2L["TextButton6_b"]["Position"] = UDim2.new(0, 436, 0, 84);
+LMG2L["TextButton6_b"].MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Dex-Explorer-DPP-73687"))()
+end)
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextButton5
@@ -172,6 +191,11 @@ LMG2L["TextButton5_c"]["Text"] = [[re]];
 LMG2L["TextButton5_c"]["Name"] = [[TextButton5]];
 LMG2L["TextButton5_c"]["Style"] = Enum.ButtonStyle.RobloxButtonDefault;
 LMG2L["TextButton5_c"]["Position"] = UDim2.new(0, 436, 0, 48);
+LMG2L["TextButton5_c"].MouseButton1Click:Connect(function()
+if game.Players.LocalPlayer.Character then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+end)
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextButton8
@@ -187,6 +211,9 @@ LMG2L["TextButton8_d"]["Text"] = [[rc7]];
 LMG2L["TextButton8_d"]["Name"] = [[TextButton8]];
 LMG2L["TextButton8_d"]["Style"] = Enum.ButtonStyle.RobloxButtonDefault;
 LMG2L["TextButton8_d"]["Position"] = UDim2.new(0, 436, 0, 156);
+LMG2L["TextButton8_d"].MouseButton1Click:Connect(function()
+     loadstring(game:HttpGet("https://raw .githubusercontent.com/CoreGui /Scripts/main/RC7"))()
+end)
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextLabel
