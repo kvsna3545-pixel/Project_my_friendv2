@@ -232,7 +232,9 @@ LMG2L["ImageLabel_10"]["Image"] = [[rbxassetid://73185495890754]];
 LMG2L["ImageLabel_10"]["Size"] = UDim2.new(0, 56, 0, 48);
 LMG2L["ImageLabel_10"]["BackgroundTransparency"] = 1;
 
-local UIS = game:GetService("UserInputService")
+-- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.UIDragDetector
+LMG2L["UIDragDetector_11"] = Instance.new("UIDragDetector", LMG2L["Frame_2"]);
+
 
 local textbox = LMG2L["TextBox_f"]
 local executeBtn = LMG2L["TextButton_7"]
@@ -240,49 +242,6 @@ local clearBtn = LMG2L["TextButton2_5"]
 local loadBtn = LMG2L["TextButton3_6"]
 local frame = LMG2L["Frame_2"]
 
--- =======================
--- 🖱️ DRAG GUI
--- =======================
-local dragging = false
-local dragInput
-local dragStart
-local startPos
-
-local function update(input)
-    local delta = input.Position - dragStart
-    frame.Position = UDim2.new(
-        startPos.X.Scale,
-        startPos.X.Offset + delta.X,
-        startPos.Y.Scale,
-        startPos.Y.Offset + delta.Y
-    )
-end
-
-frame.InputBegan:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseButton1 then
-        dragging = true
-        dragStart = input.Position
-        startPos = frame.Position
-
-        input.Changed:Connect(function()
-            if input.UserInputState == Enum.UserInputState.End then
-                dragging = false
-            end
-        end)
-    end
-end)
-
-frame.InputChanged:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseMovement then
-        dragInput = input
-    end
-end)
-
-UIS.InputChanged:Connect(function(input)
-    if input == dragInput and dragging then
-        update(input)
-    end
-end)
 
 -- =======================
 -- ⚡ EXECUTE
